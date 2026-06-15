@@ -141,10 +141,9 @@ def render_table(rows: list, title: str, columns: list) -> str:
             if c == "requirement_type":
                 cls = {"必修": "badge-required", "限选": "badge-limited", "选修": "badge-elective"}.get(str(v), "")
                 v = f'<span class="badge {cls}">{v}</span>' if cls else v
-            # 大学缩写加颜色
-            if c in ("university", "abbreviation"):
-                cls = {"SWUFE": "badge-swufe", "西南财经大学": "badge-swufe",
-                       "SUFE": "badge-sufe", "上海财经大学": "badge-sufe"}.get(str(v), "")
+            # 大学名称加颜色
+            if c in ("university", "abbreviation", "universities"):
+                cls = {"西南财经大学": "badge-swufe", "上海财经大学": "badge-sufe"}.get(str(v), "")
                 v = f'<span class="badge {cls}">{v}</span>' if cls else v
             # 数值格式化
             if isinstance(v, float):
@@ -286,7 +285,7 @@ def home():
         <p>找出两校同专业都开设的课程</p>
         <span class="endpoint">GET /api/compare/major/会计学/common</span>
     </a>
-    <a class="card" href="/api/compare/major/经济学/unique?university=SWUFE">
+    <a class="card" href="/api/compare/major/经济学/unique?university=西南财经大学">
         <span class="icon purple">⭐</span><h3>独有课程</h3>
         <p>查看某校某专业独有的课程</p>
         <span class="endpoint">GET /api/compare/major/经济学/unique</span>
@@ -444,8 +443,7 @@ def api_compare_common(request: Request, major_name: str):
 def api_compare_unique(
     request: Request,
     major_name: str,
-    university: str = Query("SWUFE", description="大学缩写：SWUFE 或 SUFE"),
+    university: str = Query("西南财经大学", description="大学名称：西南财经大学 或 上海财经大学"),
 ):
     data = queries.get_unique_courses(major_name, university)
-    uni_name = "西南财经大学" if university == "SWUFE" else "上海财经大学"
-    return json_or_html(request, data, f"{uni_name}独有课程: {major_name}")
+    return json_or_html(request, data, f"{university}独有课程: {major_name}")

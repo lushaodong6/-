@@ -118,7 +118,7 @@ def search_course_by_keyword(keyword: str, limit: int = 20):
 def compare_major_courses(major_name: str):
     """对比两校同专业（如金融学）的课程设置"""
     return query_all("""
-        SELECT u.abbreviation AS university, c.code, c.name, c.credits, c.hours,
+        SELECT u.name AS university, c.code, c.name, c.credits, c.hours,
                cc.name AS category, mc.requirement_type, mc.suggested_semester
         FROM major m
         JOIN school s ON m.school_id = s.id
@@ -127,14 +127,14 @@ def compare_major_courses(major_name: str):
         JOIN course c ON mc.course_id = c.id
         LEFT JOIN course_category cc ON c.category_id = cc.id
         WHERE m.name LIKE ?
-        ORDER BY c.name, u.abbreviation
+        ORDER BY c.name, u.name
     """, (f"%{major_name}%",))
 
 
 def compare_credits_by_major(major_name: str):
     """对比两校同专业的学分要求"""
     return query_all("""
-        SELECT u.abbreviation AS university, m.name AS major_name,
+        SELECT u.name AS university, m.name AS major_name,
                m.total_credits,
                SUM(CASE WHEN mc.requirement_type = '必修' THEN c.credits ELSE 0 END) AS required_credits,
                SUM(CASE WHEN mc.requirement_type = '限选' THEN c.credits ELSE 0 END) AS limited_elective,
@@ -146,7 +146,7 @@ def compare_credits_by_major(major_name: str):
         JOIN course c ON mc.course_id = c.id
         WHERE m.name LIKE ?
         GROUP BY u.id, m.id
-        ORDER BY u.abbreviation
+        ORDER BY u.name
     """, (f"%{major_name}%",))
 
 
@@ -154,7 +154,7 @@ def get_common_courses(major_name: str):
     """查询两校同专业共有的课程（课程名完全匹配）"""
     return query_all("""
         SELECT c.name, c.credits, c.hours,
-               GROUP_CONCAT(DISTINCT u.abbreviation) AS universities
+               GROUP_CONCAT(DISTINCT u.name) AS universities
         FROM course c
         JOIN major_course mc ON c.id = mc.course_id
         JOIN major m ON mc.major_id = m.id
@@ -167,7 +167,7 @@ def get_common_courses(major_name: str):
     """, (f"%{major_name}%",))
 
 
-def get_unique_courses(major_name: str, university_abbr: str = "SWUFE"):
+def get_unique_courses(major_name: str, university_name: str = "西南财经大学"):
     """查询某校同专业独有的课程（对方学校没有同名课程）"""
     return query_all("""
         SELECT c.name, c.credits, c.hours, cc.name AS category, mc.requirement_type
@@ -177,7 +177,7 @@ def get_unique_courses(major_name: str, university_abbr: str = "SWUFE"):
         JOIN school s ON m.school_id = s.id
         JOIN university u ON s.university_id = u.id
         LEFT JOIN course_category cc ON c.category_id = cc.id
-        WHERE m.name LIKE ? AND u.abbreviation = ?
+        WHERE m.name LIKE ? AND u.name = ?
           AND c.name NOT IN (
               SELECT c2.name
               FROM course c2
@@ -185,11 +185,11 @@ def get_unique_courses(major_name: str, university_abbr: str = "SWUFE"):
               JOIN major m2 ON mc2.major_id = m2.id
               JOIN school s2 ON m2.school_id = s2.id
               JOIN university u2 ON s2.university_id = u2.id
-              WHERE m2.name LIKE ? AND u2.abbreviation != ?
+              WHERE m2.name LIKE ? AND u2.name != ?
               GROUP BY c2.name
           )
         ORDER BY c.name
-    """, (f"%{major_name}%", university_abbr, f"%{major_name}%", university_abbr))
+    """, (f"%{major_name}%", university_name, f"%{major_name}%", university_name))
 
 
 def list_universities():
