@@ -38,22 +38,63 @@ body{{margin:0;background:#fafafa}}.topbar{{display:none}}
 <body><div id="swagger-ui"></div>
 <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js" crossorigin></script>
 <script>
-const zh={{"Try it out":"试一试","Cancel":"取消","Execute":"执行","Clear":"清除",
-"Close":"关闭","Request URL":"请求地址","Server response":"服务器响应",
-"Responses":"响应","Response body":"响应体","Response headers":"响应头",
-"Request body":"请求体","Parameters":"参数","Example Value":"示例",
-"Schema":"数据结构","No parameters":"无参数","Description":"说明",
-"Deprecated":"已弃用","required":"必填","Authorize":"授权","Filter":"筛选",
-"Send Request":"发送请求","Download":"下载","Copy":"复制","Copied":"已复制",
-"Expand all":"展开全部","Collapse all":"收起全部","Loading...":"加载中...",
-"No results found":"无结果","Media type":"媒体类型","string":"字符串",
-"integer":"整数","number":"数字","boolean":"布尔值","array":"数组","object":"对象",
-"An error occurred":"请求出错","Fetch error":"网络错误","Nothing to see here":"暂无内容"}};
-const CP=function(){{return{{components:{{transformText(t){{return zh[t]||t}}}}}}}};
-SwaggerUIBundle({{url:"{app.openapi_url}",dom_id:"#swagger-ui",
-deepLinking:true,presets:[SwaggerUIBundle.presets.apis,SwaggerUIBundle.SwaggerUIStandalonePreset],
-plugins:[CP],layout:"BaseLayout",defaultModelsExpandDepth:-1,docExpansion:"list",
-filter:true,displayRequestDuration:true}});
+// 先启动 Swagger UI
+const ui = SwaggerUIBundle({{
+    url: "{app.openapi_url}",
+    dom_id: "#swagger-ui",
+    deepLinking: true,
+    presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
+    layout: "BaseLayout",
+    defaultModelsExpandDepth: -1,
+    docExpansion: "list",
+    filter: true,
+    displayRequestDuration: true,
+    onComplete: function() {{ setTimeout(translateUI, 200); }}
+}});
+
+// 中文化：遍历 DOM 替换所有按钮和标签文本
+function translateUI() {{
+    const map = {{
+        "Try it out": "试一试", "Cancel": "取消", "Execute": "执行", "Clear": "清除",
+        "Close": "关闭", "Send Request": "发送请求", "Download": "下载",
+        "Request URL": "请求地址", "Server response": "服务器响应",
+        "Responses": "响应", "Response body": "响应内容", "Response headers": "响应头",
+        "Request body": "请求体", "Parameters": "参数", "Example Value": "示例",
+        "Schema": "数据结构", "No parameters": "无参数", "Description": "说明",
+        "Deprecated": "已弃用", "required": "必填", "Authorize": "授权",
+        "Filter by tag": "按标签筛选", "Expand all": "展开全部",
+        "Collapse all": "收起全部", "Loading...": "加载中...",
+        "No results found": "无结果", "Media type": "媒体类型",
+        "string": "字符串", "integer": "整数", "number": "数字",
+        "boolean": "布尔值", "array": "数组", "object": "对象",
+        "An error occurred": "请求出错", "Nothing to see here": "暂无内容",
+        "Copied": "已复制", "Copy": "复制",
+        "Available authorizations": "可用授权",
+        "Responses content type": "响应内容类型",
+        "Select an option": "请选择",
+        "API documentation": "API 文档",
+    }};
+
+    function walk(node) {{
+        if (node.nodeType === 3) {{  // 文本节点
+            let t = node.textContent.trim();
+            if (map[t]) node.textContent = node.textContent.replace(t, map[t]);
+        }}
+        // 也处理 placeholder、title 等属性
+        if (node.nodeType === 1) {{
+            if (node.placeholder && map[node.placeholder]) node.placeholder = map[node.placeholder];
+            if (node.title && map[node.title]) node.title = map[node.title];
+            for (let c = node.firstChild; c; c = c.nextSibling) walk(c);
+        }}
+    }}
+    walk(document.body);
+
+    // 处理 aria-label
+    document.querySelectorAll("[aria-label]").forEach(el => {{
+        const lbl = el.getAttribute("aria-label");
+        if (map[lbl]) el.setAttribute("aria-label", map[lbl]);
+    }});
+}}
 </script></body></html>""")
 
 # ============================================================
