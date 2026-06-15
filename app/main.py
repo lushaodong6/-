@@ -13,7 +13,48 @@ app = FastAPI(
     title="培养方案数据库系统",
     description="西南财经大学 & 上海财经大学 本科培养方案查询与跨校对比系统",
     version="1.0.0",
+    docs_url=None,
+    redoc_url=None,
 )
+
+
+# ============================================================
+# 自定义中文 Swagger UI (/docs)
+# ============================================================
+@app.get("/docs", include_in_schema=False)
+def chinese_swagger():
+    """中文版 Swagger 交互式 API 文档"""
+    return HTMLResponse(f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>培养方案数据库 - API 文档</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css">
+<style>
+html{{box-sizing:border-box;overflow-y:scroll}}*,*:before,*:after{{box-sizing:inherit}}
+body{{margin:0;background:#fafafa}}.topbar{{display:none}}
+</style>
+</head>
+<body><div id="swagger-ui"></div>
+<script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js" crossorigin></script>
+<script>
+const zh={{"Try it out":"试一试","Cancel":"取消","Execute":"执行","Clear":"清除",
+"Close":"关闭","Request URL":"请求地址","Server response":"服务器响应",
+"Responses":"响应","Response body":"响应体","Response headers":"响应头",
+"Request body":"请求体","Parameters":"参数","Example Value":"示例",
+"Schema":"数据结构","No parameters":"无参数","Description":"说明",
+"Deprecated":"已弃用","required":"必填","Authorize":"授权","Filter":"筛选",
+"Send Request":"发送请求","Download":"下载","Copy":"复制","Copied":"已复制",
+"Expand all":"展开全部","Collapse all":"收起全部","Loading...":"加载中...",
+"No results found":"无结果","Media type":"媒体类型","string":"字符串",
+"integer":"整数","number":"数字","boolean":"布尔值","array":"数组","object":"对象",
+"An error occurred":"请求出错","Fetch error":"网络错误","Nothing to see here":"暂无内容"}};
+const CP=function(){{return{{components:{{transformText(t){{return zh[t]||t}}}}}}}};
+SwaggerUIBundle({{url:"{app.openapi_url}",dom_id:"#swagger-ui",
+deepLinking:true,presets:[SwaggerUIBundle.presets.apis,SwaggerUIBundle.SwaggerUIStandalonePreset],
+plugins:[CP],layout:"BaseLayout",defaultModelsExpandDepth:-1,docExpansion:"list",
+filter:true,displayRequestDuration:true}});
+</script></body></html>""")
 
 # ============================================================
 # 通用工具：根据请求自动选择 HTML 或 JSON 响应
