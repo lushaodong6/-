@@ -1,0 +1,50 @@
+{
+  "universities": [
+    {
+      "id": 1,
+      "name": "西南财经大学",
+      "abbreviation": "SWUFE"
+    },
+    {
+      "id": 2,
+      "name": "上海财经大学",
+      "abbreviation": "SUFE"
+    }
+  ],
+  "schools": [
+    {"id": 1, "name": "金融学院", "university_id": 1},
+    {"id": 2, "name": "经济学院", "university_id": 1},
+    {"id": 3, "name": "会计学院", "university_id": 1},
+    {"id": 4, "name": "统计学院", "university_id": 1},
+    {"id": 5, "name": "法学院", "university_id": 1},
+    {"id": 6, "name": "金融学院", "university_id": 2},
+    {"id": 7, "name": "经济学院", "university_id": 2},
+    {"id": 8, "name": "会计学院", "university_id": 2}
+  ],
+  "majors": [
+    {"id": 1, "name": "金融学", "school_id": 1, "degree_type": "本科", "total_credits": 150, "description": "培养具备金融理论知识和实践技能的高素质人才"},
+    {"id": 2, "name": "经济学（国家拔尖基地班）", "school_id": 2, "degree_type": "本科", "total_credits": 152, "description": "培养经济学理论基础扎实的拔尖创新人才"},
+    {"id": 3, "name": "会计学", "school_id": 3, "degree_type": "本科", "total_credits": 150, "description": "培养具有会计、审计、财务管理能力的专业人才"},
+    {"id": 4, "name": "经济统计学", "school_id": 4, "degree_type": "本科", "total_credits": 152, "description": "培养具备统计学与经济学交叉知识的数据分析人才"},
+    {"id": 5, "name": "法学", "school_id": 5, "degree_type": "本科", "total_credits": 148, "description": "培养具备法律理论与实务能力的法治人才"},
+    {"id": 6, "name": "金融学", "school_id": 6, "degree_type": "本科", "total_credits": 150, "description": "培养具有国际视野的金融专业人才"},
+    {"id": 7, "name": "经济学", "school_id": 7, "degree_type": "本科", "total_credits": 150, "description": "培养经济学理论基础扎实的复合型人才"},
+    {"id": 8, "name": "会计学", "school_id": 8, "degree_type": "本科", "total_credits": 150, "description": "培养具有国际视野的会计专业人才"}
+  ],
+  "course_categories": [
+    {"id": 1, "name": "思想政治理论课", "description": "思政必修及选修课程"},
+    {"id": 2, "name": "通识课-数学类", "description": "数学基础课程"},
+    {"id": 3, "name": "通识课-外语类", "description": "大学英语课程"},
+    {"id": 4, "name": "通识课-计算机类", "description": "计算机与人工智能通识课程"},
+    {"id": 5, "name": "通识课-体育类", "description": "体育课程"},
+    {"id": 6, "name": "通识课-综合素质类", "description": "心理健康等综合素质课程"},
+    {"id": 7, "name": "通识核心课", "description": "5大模块通识核心课程"},
+    {"id": 8, "name": "通识选修课", "description": "自由选修通识课程"},
+    {"id": 9, "name": "学科基础课", "description": "同一学科门类共同课程"},
+    {"id": 10, "name": "大类平台课", "description": "同一培养大类共同课程"},
+    {"id": 11, "name": "专业核心课", "description": "各专业骨干课程"},
+    {"id": 12, "name": "专业选修课", "description": "深化专业知识选修课程"},
+    {"id": 13, "name": "跨专业选修课", "description": "全校范围内跨专业选课"},
+    {"id": 14, "name": "实验与实践课", "description": "劳动教育/实习/毕业论文等实践环节"}
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "description": "上海财经大学各专业培养方案课程数据（基于2024-2025级培养方案构造）",
+  "source": "https://gongkai.sufe.edu.cn/27/a5/c12262a206757/page.htm",
+  "majors": {
+    "金融学": {
+      "major_id": 6,
+      "courses": [
+        {"code": "SUFE-POL101", "name": "思想道德与法治", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-POL102", "name": "中国近现代史纲要", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-POL201", "name": "马克思主义基本原理", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-POL202", "name": "毛泽东思想和中国特色社会主义理论体系概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-POL203", "name": "习近平新时代中国特色社会主义思想概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-POL001", "name": "形势与政策I", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-POL002", "name": "形势与政策II", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-MATH101", "name": "高等数学I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-MATH102", "name": "高等数学II", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MATH103", "name": "线性代数", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MATH201", "name": "概率论与数理统计", "credits": 4, "hours": 64, "category_id": 2, "requirement_type": "必修", "semester": 3},
+
+        {"code": "SUFE-ENG101", "name": "大学英语I", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-ENG102", "name": "大学英语II", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-ENG201", "name": "学术英语读写", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
+
+        {"code": "SUFE-CSC101", "name": "大学计算机基础", "credits": 2, "hours": 32, "category_id": 4, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-CSC102", "name": "Python程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
+
+        {"code": "SUFE-PED101", "name": "体育I", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 1},
+        {"code": "SUFE-PED102", "name": "体育II", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 2},
+        {"code": "SUFE-PED201", "name": "体育III", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 3},
+        {"code": "SUFE-PED202", "name": "体育IV", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 4},
+
+        {"code": "SUFE-QUA101", "name": "大学生心理健康", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-QUA102", "name": "职业生涯规划", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-QUA201", "name": "创新创业基础", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 3},
+
+        {"code": "SUFE-COR101", "name": "中国哲学智慧", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 2},
+        {"code": "SUFE-COR102", "name": "西方文化思潮", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 3},
+        {"code": "SUFE-COR201", "name": "艺术美学", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 4},
+        {"code": "SUFE-COR202", "name": "科技与人文", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 5},
+
+        {"code": "SUFE-ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-FIN101", "name": "金融学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-ACC101", "name": "会计学基础", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-MGT101", "name": "管理学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-STA101", "name": "统计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-LAW101", "name": "经济法", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-FIN201", "name": "货币银行学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-FIN202", "name": "证券投资学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-FIN301", "name": "公司金融", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-FIN302", "name": "国际金融", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-FIN303", "name": "金融风险管理", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-FIN304", "name": "量化投资", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+
+        {"code": "SUFE-FIN401", "name": "投资银行学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 5},
+        {"code": "SUFE-FIN402", "name": "金融工程", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "SUFE-FIN403", "name": "固定收益证券", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "SUFE-FIN404", "name": "金融科技导论", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+
+        {"code": "SUFE-INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
+        {"code": "SUFE-INT302", "name": "信息管理系统", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 6},
+
+        {"code": "SUFE-PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-PRC201", "name": "创新创业与社会实践", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-PRC202", "name": "金融综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
+        {"code": "SUFE-PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "SUFE-PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
+      ]
+    },
+    "经济学": {
+      "major_id": 7,
+      "courses": [
+        {"code": "SUFE-POL101", "name": "思想道德与法治", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-POL102", "name": "中国近现代史纲要", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-POL201", "name": "马克思主义基本原理", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-POL202", "name": "毛泽东思想和中国特色社会主义理论体系概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-POL203", "name": "习近平新时代中国特色社会主义思想概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-POL001", "name": "形势与政策I", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-POL002", "name": "形势与政策II", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-MATH101", "name": "高等数学I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-MATH102", "name": "高等数学II", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MATH103", "name": "线性代数", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MATH201", "name": "概率论与数理统计", "credits": 4, "hours": 64, "category_id": 2, "requirement_type": "必修", "semester": 3},
+
+        {"code": "SUFE-ENG101", "name": "大学英语I", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-ENG102", "name": "大学英语II", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-ENG202", "name": "经济学英语", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
+
+        {"code": "SUFE-CSC101", "name": "大学计算机基础", "credits": 2, "hours": 32, "category_id": 4, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-CSC102", "name": "Python程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
+
+        {"code": "SUFE-PED101", "name": "体育I", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 1},
+        {"code": "SUFE-PED102", "name": "体育II", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 2},
+        {"code": "SUFE-PED201", "name": "体育III", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 3},
+        {"code": "SUFE-PED202", "name": "体育IV", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 4},
+
+        {"code": "SUFE-QUA101", "name": "大学生心理健康", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-QUA102", "name": "职业生涯规划", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-QUA201", "name": "创新创业基础", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 3},
+
+        {"code": "SUFE-COR101", "name": "中国哲学智慧", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 2},
+        {"code": "SUFE-COR102", "name": "西方文化思潮", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 3},
+        {"code": "SUFE-COR201", "name": "艺术美学", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 4},
+        {"code": "SUFE-COR202", "name": "科技与人文", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 5},
+
+        {"code": "SUFE-ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-ECO203", "name": "中级微观经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-ECO204", "name": "中级宏观经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-ECO205", "name": "经济学说史", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MGT101", "name": "管理学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
+
+        {"code": "SUFE-ECO301", "name": "发展经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-ECO302", "name": "产业经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-ECO303", "name": "国际经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-ECO304", "name": "城市经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-ECO305", "name": "数字经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+
+        {"code": "SUFE-ECO401", "name": "博弈论与信息经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "SUFE-ECO402", "name": "劳动经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "SUFE-ECO403", "name": "大数据经济分析", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+
+        {"code": "SUFE-INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
+        {"code": "SUFE-INT303", "name": "金融学原理", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
+
+        {"code": "SUFE-PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-PRC201", "name": "创新创业与社会实践", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-PRC203", "name": "经济分析综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
+        {"code": "SUFE-PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "SUFE-PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
+      ]
+    },
+    "会计学": {
+      "major_id": 8,
+      "courses": [
+        {"code": "SUFE-POL101", "name": "思想道德与法治", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-POL102", "name": "中国近现代史纲要", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-POL201", "name": "马克思主义基本原理", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-POL202", "name": "毛泽东思想和中国特色社会主义理论体系概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-POL203", "name": "习近平新时代中国特色社会主义思想概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-POL001", "name": "形势与政策I", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-POL002", "name": "形势与政策II", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-MATH101", "name": "高等数学I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-MATH102", "name": "高等数学II", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MATH103", "name": "线性代数", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-MATH201", "name": "概率论与数理统计", "credits": 4, "hours": 64, "category_id": 2, "requirement_type": "必修", "semester": 3},
+
+        {"code": "SUFE-ENG101", "name": "大学英语I", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-ENG102", "name": "大学英语II", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-ENG201", "name": "学术英语读写", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
+
+        {"code": "SUFE-CSC101", "name": "大学计算机基础", "credits": 2, "hours": 32, "category_id": 4, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-CSC102", "name": "Python程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
+
+        {"code": "SUFE-PED101", "name": "体育I", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 1},
+        {"code": "SUFE-PED102", "name": "体育II", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 2},
+        {"code": "SUFE-PED201", "name": "体育III", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 3},
+        {"code": "SUFE-PED202", "name": "体育IV", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 4},
+
+        {"code": "SUFE-QUA101", "name": "大学生心理健康", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-QUA102", "name": "职业生涯规划", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-QUA201", "name": "创新创业基础", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 3},
+
+        {"code": "SUFE-COR101", "name": "中国哲学智慧", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 2},
+        {"code": "SUFE-COR102", "name": "西方文化思潮", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 3},
+        {"code": "SUFE-COR201", "name": "艺术美学", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 4},
+        {"code": "SUFE-COR202", "name": "科技与人文", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 5},
+
+        {"code": "SUFE-ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-MGT101", "name": "管理学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-FIN101", "name": "金融学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-STA101", "name": "统计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-LAW101", "name": "经济法", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-TAX101", "name": "税法", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+
+        {"code": "SUFE-ACC201", "name": "中级财务会计I", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-ACC202", "name": "中级财务会计II", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
+        {"code": "SUFE-ACC301", "name": "高级财务会计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-ACC302", "name": "成本会计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-ACC303", "name": "审计学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-ACC304", "name": "财务管理", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+
+        {"code": "SUFE-ACC401", "name": "管理会计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "SUFE-ACC402", "name": "会计信息系统", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "SUFE-ACC403", "name": "国际会计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "SUFE-ACC404", "name": "财务报表分析", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "SUFE-ACC405", "name": "会计大数据分析", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+
+        {"code": "SUFE-INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
+        {"code": "SUFE-INT302", "name": "信息管理系统", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 6},
+
+        {"code": "SUFE-PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
+        {"code": "SUFE-PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
+        {"code": "SUFE-PRC201", "name": "创新创业与社会实践", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 5},
+        {"code": "SUFE-PRC204", "name": "会计综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
+        {"code": "SUFE-PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
+        {"code": "SUFE-PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
+        {"code": "SUFE-PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "SUFE-PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
+      ]
+    }
+  }
+}
