@@ -1,0 +1,13 @@
+# PDF raw files (too large)
+data/raw/swufe_pdfs/
+
+# Python
+__pycache__/
+*.pyc
+
+# Database (auto-generated)
+db/courses.db
+
+# IDE
+.vscode/
+.idea/
