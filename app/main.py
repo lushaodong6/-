@@ -9,6 +9,7 @@ from fastapi.responses import HTMLResponse, Response
 from app import queries
 from app.database import query_all
 from app.nl2sql import match_intent, execute_intent, llm_translate
+import app.test_page as test_page
 
 app = FastAPI(
     title="培养方案数据库系统",
@@ -18,6 +19,7 @@ app = FastAPI(
     redoc_url=None,
 )
 
+test_page.register(app)
 
 # ============================================================
 # 自定义中文 Swagger UI (/docs)
@@ -315,7 +317,7 @@ def home():
     <h1>培养方案数据库系统</h1>
     <p class="subtitle">西南财经大学 &amp; 上海财经大学 2024 级本科人才培养方案</p>
 </header>
-<div class="tip"><span>💡</span> 访问 <a href="/docs">/docs</a> 进入 Swagger 交互式 API 文档，在线测试所有接口</div>
+<div class="tip"><span>💡</span> <a href="/test">接口测试页面</a>（纯中文，下拉选择即可查询）&nbsp;|&nbsp; <a href="/docs">API 文档</a>（Swagger）</div>
 
 <div class="section-title"><span class="dot"></span> 核心查询</div>
 <div class="cards">

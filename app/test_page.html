@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>接口测试 - 培养方案数据库</title>
+<style>
+:root { --bg: #f5f5f7; --card: #fff; --text: #1d1d1f; --text2: #6e6e73; --border: #d2d2d7; --blue: #0071e3; --blue-hover: #0077ed; --red: #ff3b30; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "Microsoft YaHei", sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 24px 20px 60px; }
+.back { font-size: 13px; color: var(--blue); text-decoration: none; }
+h1 { font-size: 24px; font-weight: 600; margin: 12px 0 4px; }
+.sub { font-size: 14px; color: var(--text2); margin-bottom: 24px; }
+
+.group { background: var(--card); border-radius: 12px; padding: 20px 24px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.group-title { font-size: 15px; font-weight: 600; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+.group-title .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+.form-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.field { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 140px; }
+.field label { font-size: 13px; font-weight: 500; color: var(--text); }
+.field input, .field select { font-size: 14px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; background: #fff; color: var(--text); font-family: inherit; outline: none; }
+.field input:focus, .field select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(0,113,227,.12); }
+.btn { font-size: 14px; padding: 8px 20px; border: none; border-radius: 8px; cursor: pointer; font-weight: 500; font-family: inherit; background: var(--blue); color: #fff; white-space: nowrap; }
+.btn:hover { background: var(--blue-hover); }
+
+.result { background: var(--card); border-radius: 12px; padding: 20px 24px; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.result-header { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.result-count { font-size: 13px; color: var(--text2); margin-bottom: 14px; }
+.result-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.result-table th { text-align: left; padding: 8px 12px; background: #f5f5f7; font-weight: 600; color: var(--text2); border-bottom: 1px solid var(--border); }
+.result-table td { padding: 7px 12px; border-bottom: 1px solid #f0f0f0; }
+.result-table tr:hover td { background: #fafafa; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11.5px; font-weight: 500; }
+.badge-必修 { background: #fee9e9; color: #c62828; }
+.badge-限选 { background: #fff3e0; color: #e65100; }
+.badge-选修 { background: #e8f5e9; color: #2e7d32; }
+.badge-西南财经大学 { background: #e3f2fd; color: #1565c0; }
+.badge-上海财经大学 { background: #fce4ec; color: #880e4f; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 20px; flex-wrap: wrap; }
+.tab { font-size: 13px; padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); background: var(--card); cursor: pointer; transition: all .15s; font-family: inherit; }
+.tab:hover { border-color: var(--blue); color: var(--blue); }
+.tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+.tab-group { display: none; }
+.tab-group.active { display: block; }
+.note { font-size: 12px; color: var(--text2); margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back" href="/">&larr; 返回首页</a>
+<h1>接口测试</h1>
+<p class="sub">选择查询类型，填写中文参数，点击「发送请求」查看结果</p>
+
+<div class="tabs">
+    <button class="tab active" onclick="switchTab('major')">专业查询</button>
+    <button class="tab" onclick="switchTab('course')">课程查询</button>
+    <button class="tab" onclick="switchTab('school')">学院查询</button>
+    <button class="tab" onclick="switchTab('compare')">跨校对比</button>
+</div>
+
+<!-- 专业查询 -->
+<div id="tab-major" class="tab-group active">
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>专业课程列表</div>
+        <div class="form-row">
+            <div class="field"><label>专业名称</label>
+                <select id="f-major-name"><option>金融学</option><option>经济学</option><option>经济学（国家拔尖基地班）</option><option>会计学</option><option>经济统计学</option><option>法学</option></select></div>
+            <div class="field"><label>课程要求类型</label>
+                <select id="f-major-req"><option value="">全部课程</option><option value="必修">必修</option><option value="限选">限选</option><option value="选修">选修</option></select></div>
+            <button class="btn" onclick="doQuery('/api/major/'+encodeURIComponent($('f-major-name').value)+'/courses?requirement_type='+$('f-major-req').value)">发送请求</button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>专业学分统计</div>
+        <div class="form-row">
+            <div class="field"><label>专业名称</label>
+                <select id="f-credits-major"><option>金融学</option><option>经济学</option><option>会计学</option><option>经济统计学</option><option>法学</option></select></div>
+            <button class="btn" onclick="doQuery('/api/major/'+encodeURIComponent($('f-credits-major').value)+'/credits')">发送请求</button>
+        </div>
+    </div>
+</div>
+
+<!-- 课程查询 -->
+<div id="tab-course" class="tab-group">
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>课程信息搜索</div>
+        <div class="form-row">
+            <div class="field"><label>课程名称关键词</label><input id="f-course-kw" placeholder="如：经济学、高等数学" value="经济学"></div>
+            <button class="btn" onclick="doQuery('/api/course/search?keyword='+encodeURIComponent($('f-course-kw').value))">发送请求</button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>课程开设专业查询</div>
+        <div class="form-row">
+            <div class="field"><label>课程名称关键词</label><input id="f-major-course-kw" placeholder="如：计量经济学" value="计量经济学"></div>
+            <button class="btn" onclick="doQuery('/api/course/'+encodeURIComponent($('f-major-course-kw').value)+'/majors')">发送请求</button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>全局课程搜索</div>
+        <div class="form-row">
+            <div class="field"><label>搜索关键词</label><input id="f-full-kw" placeholder="模糊匹配课程名" value="数学"></div>
+            <div class="field" style="max-width:100px"><label>数量上限</label><input id="f-full-limit" type="number" value="20" min="1" max="100"></div>
+            <button class="btn" onclick="doQuery('/api/course/fullsearch?keyword='+encodeURIComponent($('f-full-kw').value)+'&limit='+$('f-full-limit').value)">发送请求</button>
+        </div>
+    </div>
+</div>
+
+<!-- 学院查询 -->
+<div id="tab-school" class="tab-group">
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>学院培养方案概览</div>
+        <div class="form-row">
+            <div class="field"><label>学院名称</label>
+                <select id="f-school-name"><option>金融学院</option><option>经济学院</option><option>会计学院</option><option>统计学院</option><option>法学院</option></select></div>
+            <button class="btn" onclick="doQuery('/api/school/'+encodeURIComponent($('f-school-name').value)+'/overview')">发送请求</button>
+        </div>
+    </div>
+</div>
+
+<!-- 跨校对比 -->
+<div id="tab-compare" class="tab-group">
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>课程设置对比</div>
+        <div class="form-row">
+            <div class="field"><label>专业名称</label><select id="f-comp-courses-major"><option>金融学</option><option>经济学</option><option>会计学</option></select></div>
+            <button class="btn" onclick="doQuery('/api/compare/major/'+encodeURIComponent($('f-comp-courses-major').value)+'/courses')">发送请求</button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>学分结构对比</div>
+        <div class="form-row">
+            <div class="field"><label>专业名称</label><select id="f-comp-credits-major"><option>金融学</option><option>经济学</option><option>会计学</option></select></div>
+            <button class="btn" onclick="doQuery('/api/compare/major/'+encodeURIComponent($('f-comp-credits-major').value)+'/credits')">发送请求</button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>两校共有课程</div>
+        <div class="form-row">
+            <div class="field"><label>专业名称</label><select id="f-comp-common-major"><option>金融学</option><option>经济学</option><option>会计学</option></select></div>
+            <button class="btn" onclick="doQuery('/api/compare/major/'+encodeURIComponent($('f-comp-common-major').value)+'/common')">发送请求</button>
+        </div>
+    </div>
+    <div class="group">
+        <div class="group-title"><span class="dot"></span>某校独有课程</div>
+        <div class="form-row">
+            <div class="field"><label>专业名称</label><select id="f-comp-uniq-major"><option>金融学</option><option>经济学</option><option>会计学</option></select></div>
+            <div class="field"><label>大学名称</label><select id="f-comp-uniq-uni"><option>西南财经大学</option><option>上海财经大学</option></select></div>
+            <button class="btn" onclick="doQuery('/api/compare/major/'+encodeURIComponent($('f-comp-uniq-major').value)+'/unique?university='+encodeURIComponent($('f-comp-uniq-uni').value))">发送请求</button>
+        </div>
+    </div>
+</div>
+
+<!-- 自然语言 -->
+<div class="group" style="margin-top:16px">
+    <div class="group-title"><span class="dot"></span>自然语言查询</div>
+    <div class="form-row">
+        <div class="field"><label>用中文提问</label><input id="f-nl-q" placeholder="如：金融学有哪些必修课？" value="金融学有哪些必修课？"></div>
+        <button class="btn" onclick="doQuery('/api/nl/query?q='+encodeURIComponent($('f-nl-q').value))">发送请求</button>
+    </div>
+    <p class="note">试试：两校经济学共有的课程有哪些 · 哪些专业开设了计量经济学 · 比较西财和上财金融学的学分</p>
+</div>
+
+<div id="result-area" class="result" style="display:none"></div>
+</div>
+
+<script>
+function $(id) { return document.getElementById(id); }
+function switchTab(name) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-group').forEach(g => g.classList.remove('active'));
+    document.querySelector('.tab[onclick*="'+name+'"]').classList.add('active');
+    document.getElementById('tab-'+name).classList.add('active');
+}
+async function doQuery(url) {
+    const area = document.getElementById('result-area');
+    area.style.display = 'block';
+    area.innerHTML = '<p style="color:var(--text2)">查询中...</p>';
+    try {
+        const resp = await fetch(url);
+        const data = await resp.json();
+        if (!Array.isArray(data) && data !== null) { renderTable([data], '查询结果'); }
+        else if (Array.isArray(data) && data.length > 0) { renderTable(data, '查询结果'); }
+        else { area.innerHTML = '<p style="color:var(--text2)">无匹配结果</p>'; }
+    } catch(e) { area.innerHTML = '<p style="color:var(--red)">请求失败: '+e.message+'</p>'; }
+}
+function renderTable(rows, title) {
+    const cols = Object.keys(rows[0]);
+    const labels = {
+        code:'课程代码', name:'课程名称', credits:'学分', hours:'学时',
+        category:'课程类别', requirement_type:'修读要求',
+        suggested_semester:'建议学期', major_name:'专业名称',
+        school_name:'学院', university_name:'大学', university:'大学',
+        total_credits:'毕业总学分', required_credits:'必修学分',
+        limited_elective_credits:'限选学分', elective_credits:'选修学分',
+        all_credits:'总学分合计', limited_elective:'限选学分',
+        course_count:'课程数量', major_count:'覆盖专业数',
+        universities:'开设院校', required_total:'毕业要求总学分',
+        abbreviation:'缩写', degree_type:'学位类型', description:'描述'
+    };
+    let html = '<div class="result-header">'+title+'</div><div class="result-count">共 '+rows.length+' 条结果</div><table class="result-table"><thead><tr>';
+    for (const c of cols) html += '<th>'+ (labels[c] || c) +'</th>';
+    html += '</tr></thead><tbody>';
+    for (const row of rows) {
+        html += '<tr>';
+        for (const c of cols) {
+            let v = row[c]; if (v === null || v === undefined) v = '-';
+            let cls = '';
+            if (c === 'requirement_type') cls = ' class="badge badge-'+v+'"';
+            if (c === 'university') cls = ' class="badge badge-'+v+'"';
+            if (typeof v === 'number' && !Number.isInteger(v)) v = v.toFixed(1);
+            html += '<td'+cls+'>'+v+'</td>';
+        }
+        html += '</tr>';
+    }
+    html += '</tbody></table>';
+    document.getElementById('result-area').innerHTML = html;
+}
+</script>
+</body>
+</html>
