@@ -8,6 +8,7 @@ from fastapi import FastAPI, Query, HTTPException, Request
 from fastapi.responses import HTMLResponse, Response
 from app import queries
 from app.database import query_all
+from app.nl2sql import match_intent, execute_intent, llm_translate
 
 app = FastAPI(
     title="培养方案数据库系统",
@@ -374,6 +375,20 @@ def home():
     </a>
 </div>
 
+<div class="section-title"><span class="dot"></span> 自然语言查询 <span class="tag">子模块 B</span></div>
+<div class="cards">
+    <a class="card" href="/api/nl/query?q=金融学有哪些必修课？">
+        <span class="icon blue">💬</span><h3>中文智能问答</h3>
+        <p>用中文直接提问，系统自动理解意图并返回结果</p>
+        <span class="endpoint">GET /api/nl/query?q=金融学有哪些必修课？</span>
+    </a>
+    <a class="card" href="/api/nl/test">
+        <span class="icon green">🧪</span><h3>测试用例</h3>
+        <p>查看 12 个自然语言查询示例，覆盖所有查询场景</p>
+        <span class="endpoint">GET /api/nl/test</span>
+    </a>
+</div>
+
 <div class="section-title"><span class="dot"></span> 基础数据</div>
 <div class="link-row">
     <a href="/api/universities">🏛 大学列表</a>
@@ -529,3 +544,58 @@ def api_compare_unique(
 ):
     data = queries.get_unique_courses(major_name, university)
     return json_or_html(request, data, f"{university}独有课程: {major_name}")
+
+
+# ========== 自然语言查询（子模块 B） ==========
+@app.get("/api/nl/query", tags=["自然语言查询"])
+def api_nl_query(
+    request: Request,
+    q: str = Query(..., description="用中文提问，如：金融学有哪些必修课？"),
+):
+    """
+    自然语言查询接口
+    - 支持中文问题：查课程、学分、跨校对比等
+    - 默认使用关键字匹配，配置 API Key 后自动走 LLM
+    """
+    # 尝试 LLM 优先
+    from app.nl2sql import LLM_API_KEY
+
+    if LLM_API_KEY:
+        result = llm_translate(q)
+        if "error" not in result:
+            data = result["data"]
+            title = result["query_desc"]
+            return json_or_html(request, data, title)
+
+    # 回退到关键字匹配
+    intent = match_intent(q)
+    if not intent:
+        return json_or_html(
+            request,
+            [],
+            f"无法理解的问题: {q}",
+        )
+
+    result = execute_intent(intent)
+    data = result["data"]
+    title = f"{result['query_desc']}（共 {result['result_count']} 条）"
+    return json_or_html(request, data, title)
+
+
+@app.get("/api/nl/test", tags=["自然语言查询"])
+def api_nl_testcases():
+    """返回自然语言查询的测试用例列表"""
+    return [
+        {"question": "查询金融学专业的必修课", "expected": "专业必修课列表"},
+        {"question": "经济学有哪些限选课程", "expected": "专业课程列表（限选）"},
+        {"question": "高等数学多少学分", "expected": "课程信息"},
+        {"question": "金融学专业毕业需要多少学分", "expected": "学分统计"},
+        {"question": "哪些专业开设了计量经济学", "expected": "课程开设范围"},
+        {"question": "会计学院有哪些专业", "expected": "学院概览"},
+        {"question": "对比西南财经大学和上海财经大学金融学的课程", "expected": "跨校课程对比"},
+        {"question": "比较西财和上财会计学的学分要求", "expected": "跨校学分对比"},
+        {"question": "两校经济学共有的课程有哪些", "expected": "共有课程"},
+        {"question": "西南财经大学金融学独有的课程", "expected": "独有课程"},
+        {"question": "搜索包含金融的课程", "expected": "全局搜索"},
+        {"question": "法学专业的必修课有哪些", "expected": "专业必修课列表"},
+    ]
