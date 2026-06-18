@@ -8,7 +8,7 @@ from docx.enum.style import WD_STYLE_TYPE
 import os
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUTPUT = os.path.join(PROJECT_ROOT, "report", "培养方案数据库系统_课程报告_v2.docx")
+OUTPUT = os.path.join(PROJECT_ROOT, "report", "培养方案数据库系统_课程报告_终稿.docx")
 
 doc = Document()
 
@@ -86,8 +86,9 @@ add_title('培养方案数据库系统的设计与实现')
 add_para('', '宋体', Pt(10.5))
 
 # 作者信息
-add_para('姓名：________  学号：________', '仿宋_GB2312', Pt(16), alignment=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
-add_para('（XX大学 XX学院）', '宋体', Pt(9), alignment=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
+add_para('姓名：卢绍东  学号：42411019', '仿宋_GB2312', Pt(16), alignment=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
+add_para('（西南财经大学 计算机学院）', '宋体', Pt(9), alignment=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
+add_para('GitHub：https://github.com/lushaodong6/-', '宋体', Pt(9), alignment=WD_ALIGN_PARAGRAPH.CENTER, space_after=Pt(4))
 add_para('', '宋体', Pt(10.5))
 
 # 中文摘要
@@ -130,8 +131,8 @@ add_para('', '宋体', Pt(10.5))
 
 # 英文标题
 add_para('Design and Implementation of a Training Plan Database System', 'Times New Roman', Pt(14), bold=True, alignment=WD_ALIGN_PARAGRAPH.CENTER)
-add_para('NAME Name  NAME Name', 'Times New Roman', Pt(10.5), alignment=WD_ALIGN_PARAGRAPH.CENTER)
-add_para('(School of XXX, University, City 000000, China)', 'Times New Roman', Pt(9), alignment=WD_ALIGN_PARAGRAPH.CENTER)
+add_para('Lu Shaodong', 'Times New Roman', Pt(10.5), alignment=WD_ALIGN_PARAGRAPH.CENTER)
+add_para('(School of Computer Science, SWUFE, Chengdu 611130, China)', 'Times New Roman', Pt(9), alignment=WD_ALIGN_PARAGRAPH.CENTER)
 
 # 英文摘要
 p = doc.add_paragraph()
