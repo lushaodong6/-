@@ -50,4 +50,4 @@ uvicorn app.main:app --reload
 
 ## 作者
 
-[你的姓名] - [你的学号]
+卢绍东 42411019
