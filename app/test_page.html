@@ -65,7 +65,7 @@ h1 { font-size: 24px; font-weight: 600; margin: 12px 0 4px; }
         <div class="group-title"><span class="dot"></span>专业课程列表</div>
         <div class="form-row">
             <div class="field"><label>专业名称</label>
-                <select id="f-major-name"><option>金融学</option><option>经济学</option><option>经济学（国家拔尖基地班）</option><option>会计学</option><option>经济统计学</option><option>法学</option></select></div>
+                <select id="f-major-name"><option>金融学</option><option>金融工程</option><option>经济学（国家经济学基础人才培养基地班）</option><option>会计学</option><option>会计学（注册会计师专门化方向）</option><option>经济统计学</option><option>法学</option><option>法学（法学与金融学双学位）</option></select></div>
             <div class="field"><label>课程要求类型</label>
                 <select id="f-major-req"><option value="">全部课程</option><option value="必修">必修</option><option value="限选">限选</option><option value="选修">选修</option></select></div>
             <button class="btn" onclick="doQuery('/api/major/'+encodeURIComponent($('f-major-name').value)+'/courses?requirement_type='+$('f-major-req').value)">发送请求</button>
@@ -75,7 +75,7 @@ h1 { font-size: 24px; font-weight: 600; margin: 12px 0 4px; }
         <div class="group-title"><span class="dot"></span>专业学分统计</div>
         <div class="form-row">
             <div class="field"><label>专业名称</label>
-                <select id="f-credits-major"><option>金融学</option><option>经济学</option><option>会计学</option><option>经济统计学</option><option>法学</option></select></div>
+                <select id="f-credits-major"><option>金融学</option><option>金融工程</option><option>经济学（国家经济学基础人才培养基地班）</option><option>会计学</option><option>经济统计学</option><option>法学</option></select></div>
             <button class="btn" onclick="doQuery('/api/major/'+encodeURIComponent($('f-credits-major').value)+'/credits')">发送请求</button>
         </div>
     </div>

@@ -1,6 +1,6 @@
 {
-  "description": "西南财经大学各专业培养方案课程数据（基于2024级培养方案构造）",
-  "source": "https://jwc.swufe.edu.cn/jxypy/pyfa.htm",
+  "description": "西南财经大学各专业培养方案课程数据（基于2024级官方培养方案及招生信息）",
+  "source": "https://jwc.swufe.edu.cn/xinancaijingdaxue2024jibenkerencaipeiyangfangan.pdf",
   "majors": {
     "金融学": {
       "major_id": 1,
@@ -14,7 +14,6 @@
         {"code": "POL002", "name": "形势与政策II", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 2},
         {"code": "POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
         {"code": "POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
-        {"code": "POL301", "name": "当代世界经济与政治", "credits": 2, "hours": 32, "category_id": 1, "requirement_type": "选修", "semester": 5},
 
         {"code": "MATH101", "name": "高等数学I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
         {"code": "MATH102", "name": "高等数学II", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 2},
@@ -50,24 +49,29 @@
         {"code": "ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
         {"code": "ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
 
-        {"code": "FIN101", "name": "金融学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
-        {"code": "ACC101", "name": "会计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
-        {"code": "PAD101", "name": "财政学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "FIN101", "name": "会计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
         {"code": "STA101", "name": "统计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
         {"code": "MGT101", "name": "管理学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
+        {"code": "LAW202", "name": "经济法律概论", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
 
-        {"code": "FIN201", "name": "商业银行经营学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
-        {"code": "FIN202", "name": "证券投资学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
-        {"code": "FIN301", "name": "公司金融", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "FIN302", "name": "国际金融", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "FIN303", "name": "金融风险管理", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "FIN201", "name": "货币金融学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
+        {"code": "FIN202", "name": "公司金融", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "FIN203", "name": "投资学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "FIN204", "name": "国际金融学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "FIN301", "name": "商业银行经营管理", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "FIN302", "name": "衍生金融工具", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "FIN303", "name": "金融计量学", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "FIN304", "name": "金融风险管理", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "FIN305", "name": "金融经济学", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "FIN306", "name": "投资银行学", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 7},
+        {"code": "FIN307", "name": "公司财务案例", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 7},
+        {"code": "FIN308", "name": "数字跨境金融", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 7},
 
-        {"code": "FIN401", "name": "投资银行学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 5},
-        {"code": "FIN402", "name": "金融工程", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "FIN403", "name": "保险学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 5},
-        {"code": "FIN404", "name": "信托与租赁", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "FIN405", "name": "金融计量学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "FIN406", "name": "行为金融学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "FIN401", "name": "金融数据分析与编程", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 5},
+        {"code": "FIN402", "name": "金融科技", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "FIN403", "name": "资产定价", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "FIN404", "name": "固定收益证券", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "FIN405", "name": "金融监管理论与实践", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
 
         {"code": "INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
         {"code": "INT302", "name": "信息管理系统", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 6},
@@ -78,80 +82,7 @@
         {"code": "PRC202", "name": "金融综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
         {"code": "PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
         {"code": "PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
-        {"code": "PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
-        {"code": "PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
-      ]
-    },
-    "经济学（国家拔尖基地班）": {
-      "major_id": 2,
-      "courses": [
-        {"code": "POL101", "name": "思想道德与法治", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 1},
-        {"code": "POL102", "name": "中国近现代史纲要", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 2},
-        {"code": "POL201", "name": "马克思主义基本原理", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 3},
-        {"code": "POL202", "name": "毛泽东思想和中国特色社会主义理论体系概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 4},
-        {"code": "POL203", "name": "习近平新时代中国特色社会主义思想概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 5},
-        {"code": "POL001", "name": "形势与政策I", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 1},
-        {"code": "POL002", "name": "形势与政策II", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 2},
-        {"code": "POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
-        {"code": "POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
-
-        {"code": "MATH101", "name": "高等数学I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
-        {"code": "MATH102", "name": "高等数学II", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 2},
-        {"code": "MATH103", "name": "线性代数", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
-        {"code": "MATH202", "name": "概率论与数理统计A", "credits": 4, "hours": 64, "category_id": 2, "requirement_type": "必修", "semester": 3},
-
-        {"code": "ENG101", "name": "大学英语I", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 1},
-        {"code": "ENG102", "name": "大学英语II", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 2},
-        {"code": "ENG202", "name": "经济学英语", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
-
-        {"code": "CSC101", "name": "大学计算机基础", "credits": 2, "hours": 32, "category_id": 4, "requirement_type": "必修", "semester": 1},
-        {"code": "CSC102", "name": "Python程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
-
-        {"code": "PED101", "name": "体育I", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 1},
-        {"code": "PED102", "name": "体育II", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 2},
-        {"code": "PED201", "name": "体育III", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 3},
-        {"code": "PED202", "name": "体育IV", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 4},
-
-        {"code": "QUA101", "name": "大学生心理健康", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 1},
-        {"code": "QUA102", "name": "职业生涯规划", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 2},
-        {"code": "QUA201", "name": "创新创业基础", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 3},
-
-        {"code": "COR101", "name": "哲学智慧与批判性思维", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 2},
-        {"code": "COR102", "name": "中国传统文化概论", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 3},
-        {"code": "COR201", "name": "艺术鉴赏与审美体验", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 4},
-        {"code": "COR202", "name": "科技发展史与科学方法论", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 5},
-
-        {"code": "ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
-        {"code": "ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
-        {"code": "ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
-        {"code": "ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
-
-        {"code": "ECO203", "name": "中级微观经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
-        {"code": "ECO204", "name": "中级宏观经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
-        {"code": "ECO205", "name": "经济学说史", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
-        {"code": "ECO206", "name": "数理经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
-
-        {"code": "ECO301", "name": "发展经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "ECO302", "name": "产业经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "ECO303", "name": "制度经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
-        {"code": "ECO304", "name": "国际经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
-        {"code": "ECO305", "name": "劳动经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-
-        {"code": "ECO401", "name": "博弈论与信息经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "ECO402", "name": "区域经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "ECO403", "name": "资源与环境经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
-        {"code": "ECO404", "name": "大数据与经济分析", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
-
-        {"code": "INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
-        {"code": "INT303", "name": "金融学原理", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
-
-        {"code": "PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
-        {"code": "PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
-        {"code": "PRC201", "name": "创新、创业与社会实践", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 5},
-        {"code": "PRC203", "name": "经济综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
-        {"code": "PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
-        {"code": "PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
-        {"code": "PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "PRC402", "name": "毕业论文", "credits": 8, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
         {"code": "PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
       ]
     },
@@ -197,29 +128,29 @@
         {"code": "ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
         {"code": "ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
         {"code": "ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
-        {"code": "ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
+        {"code": "STA101", "name": "统计学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 4},
 
         {"code": "MGT101", "name": "管理学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 2},
-        {"code": "FIN101", "name": "金融学原理", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
-        {"code": "STA101", "name": "统计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "FIN101", "name": "会计学基础", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
         {"code": "LAW101", "name": "经济法", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
         {"code": "TAX101", "name": "税法", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
 
         {"code": "ACC201", "name": "中级财务会计I", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 3},
         {"code": "ACC202", "name": "中级财务会计II", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 4},
         {"code": "ACC301", "name": "高级财务会计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "ACC302", "name": "成本会计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "ACC302", "name": "成本和管理会计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
         {"code": "ACC303", "name": "审计学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
         {"code": "ACC304", "name": "财务管理", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "ACC305", "name": "会计信息系统", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 6},
 
-        {"code": "ACC401", "name": "管理会计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "ACC402", "name": "会计信息系统", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "ACC403", "name": "国际会计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
-        {"code": "ACC404", "name": "财务报表分析", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
-        {"code": "ACC405", "name": "政府与非营利组织会计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "ACC401", "name": "财务分析与公司估值", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "ACC402", "name": "审计数据分析", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "ACC403", "name": "国际会计准则比较", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "ACC404", "name": "税务筹划", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "ACC405", "name": "大数据处理技术", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
 
         {"code": "INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
-        {"code": "INT302", "name": "信息管理系统", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 6},
+        {"code": "INT303", "name": "金融学基础", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
 
         {"code": "PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
         {"code": "PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
@@ -227,12 +158,12 @@
         {"code": "PRC204", "name": "会计综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
         {"code": "PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
         {"code": "PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
-        {"code": "PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "PRC402", "name": "毕业论文", "credits": 8, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
         {"code": "PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
       ]
     },
-    "经济统计学": {
-      "major_id": 4,
+    "经济学": {
+      "major_id": 2,
       "courses": [
         {"code": "POL101", "name": "思想道德与法治", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 1},
         {"code": "POL102", "name": "中国近现代史纲要", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 2},
@@ -244,18 +175,17 @@
         {"code": "POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
         {"code": "POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
 
-        {"code": "MATH111", "name": "数学分析I", "credits": 6, "hours": 96, "category_id": 2, "requirement_type": "必修", "semester": 1},
-        {"code": "MATH112", "name": "数学分析II", "credits": 6, "hours": 96, "category_id": 2, "requirement_type": "必修", "semester": 2},
-        {"code": "MATH113", "name": "高等代数I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
-        {"code": "MATH114", "name": "高等代数II", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "MATH101", "name": "高等数学I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
+        {"code": "MATH102", "name": "高等数学II", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "MATH103", "name": "线性代数", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
         {"code": "MATH202", "name": "概率论与数理统计A", "credits": 4, "hours": 64, "category_id": 2, "requirement_type": "必修", "semester": 3},
 
         {"code": "ENG101", "name": "大学英语I", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 1},
         {"code": "ENG102", "name": "大学英语II", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 2},
-        {"code": "ENG201", "name": "学术英语读写", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
+        {"code": "ENG202", "name": "经济学英语", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
 
         {"code": "CSC101", "name": "大学计算机基础", "credits": 2, "hours": 32, "category_id": 4, "requirement_type": "必修", "semester": 1},
-        {"code": "CSC103", "name": "R语言程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
+        {"code": "CSC102", "name": "Python程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
 
         {"code": "PED101", "name": "体育I", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 1},
         {"code": "PED102", "name": "体育II", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 2},
@@ -274,33 +204,35 @@
         {"code": "ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
         {"code": "ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
         {"code": "ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
+        {"code": "ECO202", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 4},
 
-        {"code": "STA201", "name": "统计学导论", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
-        {"code": "STA202", "name": "抽样技术", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
-        {"code": "STA203", "name": "国民经济统计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
-        {"code": "STA204", "name": "Python数据科学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "ECO203", "name": "经济学思想与方法", "credits": 2, "hours": 32, "category_id": 10, "requirement_type": "必修", "semester": 1},
+        {"code": "ECO204", "name": "中级微观经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "ECO205", "name": "中级宏观经济学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 5},
+        {"code": "ECO206", "name": "中国经济史与经济思想史", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "ECO207", "name": "外国经济史与经济思想史", "credits": 2, "hours": 32, "category_id": 10, "requirement_type": "必修", "semester": 4},
 
-        {"code": "STA301", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 11, "requirement_type": "必修", "semester": 4},
-        {"code": "STA302", "name": "时间序列分析", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "STA303", "name": "多元统计分析", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
-        {"code": "STA304", "name": "非参数统计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
-        {"code": "STA305", "name": "大数据分析", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "ECO301", "name": "国际经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "ECO302", "name": "产业经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "ECO303", "name": "发展经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "ECO304", "name": "博弈论与信息经济学", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "ECO305", "name": "《资本论》选读", "credits": 2, "hours": 32, "category_id": 11, "requirement_type": "必修", "semester": 5},
 
-        {"code": "STA401", "name": "贝叶斯统计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 5},
-        {"code": "STA402", "name": "金融统计学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
-        {"code": "STA403", "name": "生物统计学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
-        {"code": "STA404", "name": "机器学习导论", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "ECO401", "name": "制度经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "ECO402", "name": "劳动经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "ECO403", "name": "资源与环境经济学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "ECO404", "name": "数字经济概论", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
 
-        {"code": "INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
-        {"code": "INT304", "name": "数据库原理与应用", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 6},
+        {"code": "INT303", "name": "金融学基础", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
+        {"code": "INT305", "name": "社会学概论", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
 
         {"code": "PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
         {"code": "PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
         {"code": "PRC201", "name": "创新、创业与社会实践", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 5},
-        {"code": "PRC205", "name": "统计建模综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
+        {"code": "PRC203", "name": "经济分析综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
         {"code": "PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
         {"code": "PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
-        {"code": "PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "PRC402", "name": "毕业论文", "credits": 8, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
         {"code": "PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
       ]
     },
@@ -373,7 +305,80 @@
         {"code": "PRC206", "name": "模拟法庭综合实训", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
         {"code": "PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
         {"code": "PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
-        {"code": "PRC402", "name": "毕业论文", "credits": 6, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "PRC402", "name": "毕业论文", "credits": 8, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
+        {"code": "PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
+      ]
+    },
+    "经济统计学": {
+      "major_id": 4,
+      "courses": [
+        {"code": "POL101", "name": "思想道德与法治", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "POL102", "name": "中国近现代史纲要", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "POL201", "name": "马克思主义基本原理", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "POL202", "name": "毛泽东思想和中国特色社会主义理论体系概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 4},
+        {"code": "POL203", "name": "习近平新时代中国特色社会主义思想概论", "credits": 3, "hours": 48, "category_id": 1, "requirement_type": "必修", "semester": 5},
+        {"code": "POL001", "name": "形势与政策I", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 1},
+        {"code": "POL002", "name": "形势与政策II", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 2},
+        {"code": "POL003", "name": "形势与政策III", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 3},
+        {"code": "POL004", "name": "形势与政策IV", "credits": 0.5, "hours": 8, "category_id": 1, "requirement_type": "必修", "semester": 4},
+
+        {"code": "MATH111", "name": "数学分析I", "credits": 6, "hours": 96, "category_id": 2, "requirement_type": "必修", "semester": 1},
+        {"code": "MATH112", "name": "数学分析II", "credits": 6, "hours": 96, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "MATH113", "name": "高等代数I", "credits": 5, "hours": 80, "category_id": 2, "requirement_type": "必修", "semester": 1},
+        {"code": "MATH114", "name": "高等代数II", "credits": 3, "hours": 48, "category_id": 2, "requirement_type": "必修", "semester": 2},
+        {"code": "MATH202", "name": "概率论与数理统计A", "credits": 4, "hours": 64, "category_id": 2, "requirement_type": "必修", "semester": 3},
+
+        {"code": "ENG101", "name": "大学英语I", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 1},
+        {"code": "ENG102", "name": "大学英语II", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "必修", "semester": 2},
+        {"code": "ENG201", "name": "学术英语读写", "credits": 2, "hours": 32, "category_id": 3, "requirement_type": "限选", "semester": 3},
+
+        {"code": "CSC101", "name": "大学计算机基础", "credits": 2, "hours": 32, "category_id": 4, "requirement_type": "必修", "semester": 1},
+        {"code": "CSC103", "name": "R语言程序设计", "credits": 3, "hours": 48, "category_id": 4, "requirement_type": "限选", "semester": 2},
+
+        {"code": "PED101", "name": "体育I", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 1},
+        {"code": "PED102", "name": "体育II", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 2},
+        {"code": "PED201", "name": "体育III", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 3},
+        {"code": "PED202", "name": "体育IV", "credits": 1, "hours": 32, "category_id": 5, "requirement_type": "限选", "semester": 4},
+
+        {"code": "QUA101", "name": "大学生心理健康", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 1},
+        {"code": "QUA102", "name": "职业生涯规划", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 2},
+        {"code": "QUA201", "name": "创新创业基础", "credits": 2, "hours": 32, "category_id": 6, "requirement_type": "必修", "semester": 3},
+
+        {"code": "COR101", "name": "哲学智慧与批判性思维", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 2},
+        {"code": "COR102", "name": "中国传统文化概论", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 3},
+        {"code": "COR201", "name": "艺术鉴赏与审美体验", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 4},
+        {"code": "COR202", "name": "科技发展史与科学方法论", "credits": 2, "hours": 32, "category_id": 7, "requirement_type": "限选", "semester": 5},
+
+        {"code": "ECO101", "name": "政治经济学", "credits": 3, "hours": 48, "category_id": 9, "requirement_type": "必修", "semester": 1},
+        {"code": "ECO102", "name": "微观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 2},
+        {"code": "ECO201", "name": "宏观经济学", "credits": 4, "hours": 64, "category_id": 9, "requirement_type": "必修", "semester": 3},
+
+        {"code": "STA201", "name": "统计学导论", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "STA202", "name": "国民经济统计学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 3},
+        {"code": "STA203", "name": "抽样技术", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+        {"code": "STA204", "name": "Python数据科学", "credits": 3, "hours": 48, "category_id": 10, "requirement_type": "必修", "semester": 4},
+
+        {"code": "STA301", "name": "计量经济学", "credits": 4, "hours": 64, "category_id": 11, "requirement_type": "必修", "semester": 4},
+        {"code": "STA302", "name": "时间序列分析", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "STA303", "name": "多元统计分析", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 5},
+        {"code": "STA304", "name": "非参数统计", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+        {"code": "STA305", "name": "大数据分析", "credits": 3, "hours": 48, "category_id": 11, "requirement_type": "必修", "semester": 6},
+
+        {"code": "STA401", "name": "贝叶斯统计", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 5},
+        {"code": "STA402", "name": "金融统计学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 6},
+        {"code": "STA403", "name": "生物统计学", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+        {"code": "STA404", "name": "机器学习导论", "credits": 2, "hours": 32, "category_id": 12, "requirement_type": "限选", "semester": 7},
+
+        {"code": "INT301", "name": "市场营销学", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 5},
+        {"code": "INT304", "name": "数据库原理与应用", "credits": 2, "hours": 32, "category_id": 13, "requirement_type": "选修", "semester": 6},
+
+        {"code": "PRC101", "name": "劳动教育", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 2},
+        {"code": "PRC102", "name": "名著阅读", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 3},
+        {"code": "PRC201", "name": "创新、创业与社会实践", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 5},
+        {"code": "PRC205", "name": "统计建模综合实验", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6},
+        {"code": "PRC301", "name": "军事技能", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 1},
+        {"code": "PRC401", "name": "毕业实习", "credits": 4, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 7},
+        {"code": "PRC402", "name": "毕业论文", "credits": 8, "hours": 0, "category_id": 14, "requirement_type": "必修", "semester": 8},
         {"code": "PRC103", "name": "专业写作", "credits": 2, "hours": 32, "category_id": 14, "requirement_type": "必修", "semester": 6}
       ]
     }

@@ -40,7 +40,7 @@ def main():
     print("【查询1：专业必修课】")
     test("金融学必修课", queries.get_required_courses("金融学"), 5)
     test("会计学必修课", queries.get_required_courses("会计学"), 5)
-    test("法学必修课", queries.get_required_courses("法学"), 5)
+    test("金融工程必修课", queries.get_required_courses("金融工程"), 5)
 
     # 3. 查询2：课程信息
     print("【查询2：课程信息搜索】")
@@ -51,7 +51,7 @@ def main():
     # 4. 查询3：学分统计
     print("【查询3：专业学分统计】")
     test("金融学学分", [queries.get_total_credits("金融学")], 1)
-    test("经济学学分", [queries.get_total_credits("经济学（国家拔尖基地班）")], 1)
+    test("经济学学分", [queries.get_total_credits("经济学（国家经济学基础人才培养基地班）")], 1)
     test("经济统计学学分", [queries.get_total_credits("经济统计学")], 1)
 
     # 5. 查询4：课程-专业关联
